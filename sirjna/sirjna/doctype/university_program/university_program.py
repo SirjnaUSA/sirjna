@@ -1,0 +1,2 @@
+import frappe
+# controller stub

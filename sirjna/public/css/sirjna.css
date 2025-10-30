@@ -1,1 +1,1 @@
-body{background:#fff;color:#000;font-family:system-ui}
+:root{--sirjna-primary:#0A2342;--sirjna-accent:#D4AF37;--sirjna-bg-light:#F8F9FB;--sirjna-text:#111111;} body{font-family:'Inter','Poppins',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--sirjna-text);background:var(--sirjna-bg-light)}

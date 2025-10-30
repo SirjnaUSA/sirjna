@@ -1,8 +1,0 @@
-[
-  {
-    "doctype": "Email Template",
-    "name": "Sirjna Welcome",
-    "subject": "Welcome",
-    "response": "Hi {{ doc.full_name }}"
-  }
-]

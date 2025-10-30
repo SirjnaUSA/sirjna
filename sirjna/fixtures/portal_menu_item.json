@@ -1,9 +1,0 @@
-[
-  {
-    "doctype": "Portal Menu Item",
-    "title": "Portal",
-    "route": "/portal",
-    "enabled": 1,
-    "idx": 1
-  }
-]
