@@ -1,0 +1,20 @@
+[
+  {
+    "doctype": "Top Bar Item",
+    "parent": "Website Settings",
+    "parenttype": "Website Settings",
+    "parentfield": "top_bar_items",
+    "label": "Home",
+    "url": "/",
+    "idx": 1
+  },
+  {
+    "doctype": "Top Bar Item",
+    "parent": "Website Settings",
+    "parenttype": "Website Settings",
+    "parentfield": "top_bar_items",
+    "label": "Setup",
+    "url": "/setup",
+    "idx": 2
+  }
+]

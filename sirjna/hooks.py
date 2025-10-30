@@ -1,0 +1,10 @@
+app_name='sirjna'
+app_title='Sirjna'
+app_publisher='Parinda LLC'
+app_email='contact@sirjna.com'
+app_license='MIT'
+app_include_css=['/assets/sirjna/css/sirjna.css']
+fixtures=['Module Def','Role','Website Settings','Top Bar Item','Portal Menu Item','Web Form','Email Template','Workflow']
+doc_events={}
+scheduler_events={}
+after_install=[]

@@ -1,0 +1,30 @@
+{
+  "doctype": "DocType",
+  "name": "Student Profile",
+  "module": "Sirjna",
+  "custom": 0,
+  "track_changes": 1,
+  "editable_grid": 0,
+  "is_tree": 0,
+  "istable": 0,
+  "issingle": 0,
+  "fields": [
+    {
+      "fieldname": "full_name",
+      "label": "Full Name",
+      "fieldtype": "Data",
+      "reqd": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}

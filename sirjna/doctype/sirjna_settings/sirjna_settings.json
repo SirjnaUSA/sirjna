@@ -1,0 +1,31 @@
+{
+  "doctype": "DocType",
+  "name": "Sirjna Settings",
+  "module": "Sirjna",
+  "custom": 0,
+  "track_changes": 1,
+  "editable_grid": 0,
+  "is_tree": 0,
+  "istable": 0,
+  "issingle": 1,
+  "fields": [
+    {
+      "fieldname": "mode",
+      "label": "Mode",
+      "fieldtype": "Select",
+      "options": "Test\nLive",
+      "default": "Test"
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}
