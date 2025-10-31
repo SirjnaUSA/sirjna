@@ -1,0 +1,6 @@
+{
+  "js/sirjna.bundle.js": [],
+  "css/sirjna.bundle.css": [
+    "public/css/sirjna.css"
+  ]
+}

@@ -1,4 +1,4 @@
-from sirjna import __version__ as app_version
+from .sirjna import __version__ as app_version
 
 app_name = "sirjna"
 app_title = "Sirjna"
@@ -8,6 +8,5 @@ app_email = "contact@sirjna.com"
 app_license = "MIT"
 app_version = app_version
 
-app_include_css = ["/assets/sirjna/css/sirjna.css"]
-
-fixtures = []
+app_include_css = ["/assets/sirjna/css/sirjna.bundle.css"]
+app_include_js = ["/assets/sirjna/js/sirjna.bundle.js"]
