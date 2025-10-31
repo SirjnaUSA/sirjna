@@ -1,9 +1,10 @@
 from frappe import _
+
 def get_data():
     return [{
-        "module_name": "Sirjna",
+        "module_name": "Sirjna Core",
         "color": "black",
-        "icon": "octicon octicon-mortar-board",
+        "icon": "octicon octicon-rocket",
         "type": "module",
-        "label": _("Sirjna")
+        "label": _("Sirjna Core"),
     }]
