@@ -1,0 +1,47 @@
+{
+  "doctype": "DocType",
+  "name": "Webinar Registration",
+  "module": "Sirjna",
+  "custom": 0,
+  "istable": 0,
+  "editable_grid": 0,
+  "track_changes": 1,
+  "fields": [
+    {
+      "fieldname": "webinar",
+      "label": "Webinar",
+      "fieldtype": "Link",
+      "options": "Webinar",
+      "reqd": 1
+    },
+    {
+      "fieldname": "full_name",
+      "label": "Full Name",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "email",
+      "label": "Email",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "status",
+      "label": "Status",
+      "fieldtype": "Select",
+      "options": "Registered\nAttended\nNo-show",
+      "default": "Registered"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ],
+  "title_field": "full_name"
+}

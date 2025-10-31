@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.pyo
+*.DS_Store
+node_modules/
+*.log
+*.sqlite3
+*.swp
+dist/
+build/
+.bench/

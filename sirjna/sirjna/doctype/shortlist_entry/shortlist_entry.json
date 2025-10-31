@@ -1,0 +1,36 @@
+{
+  "doctype": "DocType",
+  "name": "Shortlist Entry",
+  "module": "Sirjna",
+  "custom": 0,
+  "istable": 1,
+  "fields": [
+    {
+      "fieldname": "university_program",
+      "label": "University Program",
+      "fieldtype": "Link",
+      "options": "University Program",
+      "reqd": 1
+    },
+    {
+      "fieldname": "tier",
+      "label": "Tier",
+      "fieldtype": "Select",
+      "options": "Safe\nTarget\nReach"
+    },
+    {
+      "fieldname": "rationale",
+      "label": "Rationale",
+      "fieldtype": "Small Text"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}

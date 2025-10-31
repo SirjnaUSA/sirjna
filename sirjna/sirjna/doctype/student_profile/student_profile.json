@@ -1,0 +1,56 @@
+{
+  "doctype": "DocType",
+  "name": "Student Profile",
+  "module": "Sirjna",
+  "custom": 0,
+  "istable": 0,
+  "editable_grid": 0,
+  "track_changes": 1,
+  "fields": [
+    {
+      "fieldname": "user",
+      "label": "User",
+      "fieldtype": "Link",
+      "options": "User",
+      "reqd": 1
+    },
+    {
+      "fieldname": "full_name",
+      "label": "Full Name",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "email",
+      "label": "Email",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "phone",
+      "label": "Phone",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "status_phase",
+      "label": "Status Phase",
+      "fieldtype": "Select",
+      "options": "Sankalp\nUdaan\nNirman\nPragati",
+      "default": "Sankalp"
+    },
+    {
+      "fieldname": "progress_pct",
+      "label": "Progress %",
+      "fieldtype": "Percent",
+      "read_only": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ],
+  "title_field": "full_name"
+}

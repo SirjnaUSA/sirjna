@@ -1,0 +1,69 @@
+{
+  "doctype": "DocType",
+  "name": "Advisory Session",
+  "module": "Sirjna",
+  "custom": 0,
+  "istable": 0,
+  "editable_grid": 0,
+  "track_changes": 1,
+  "fields": [
+    {
+      "fieldname": "student",
+      "label": "Student",
+      "fieldtype": "Link",
+      "options": "Student Profile"
+    },
+    {
+      "fieldname": "slot_start",
+      "label": "Slot Start",
+      "fieldtype": "Datetime"
+    },
+    {
+      "fieldname": "slot_end",
+      "label": "Slot End",
+      "fieldtype": "Datetime"
+    },
+    {
+      "fieldname": "is_paid",
+      "label": "Is Paid",
+      "fieldtype": "Check"
+    },
+    {
+      "fieldname": "stripe_session_id",
+      "label": "Stripe Session ID",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "zoom_meeting_id",
+      "label": "Zoom Meeting ID",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "video_link",
+      "label": "Video Link",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "status",
+      "label": "Status",
+      "fieldtype": "Select",
+      "options": "Booked\nCompleted\nNo-show",
+      "default": "Booked"
+    },
+    {
+      "fieldname": "credit_applied",
+      "label": "Credit Applied",
+      "fieldtype": "Check"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ],
+  "title_field": "student"
+}

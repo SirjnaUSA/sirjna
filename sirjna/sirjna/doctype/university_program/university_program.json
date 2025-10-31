@@ -1,0 +1,65 @@
+{
+  "doctype": "DocType",
+  "name": "University Program",
+  "module": "Sirjna",
+  "custom": 0,
+  "istable": 0,
+  "editable_grid": 0,
+  "track_changes": 1,
+  "fields": [
+    {
+      "fieldname": "university",
+      "label": "University",
+      "fieldtype": "Link",
+      "options": "University",
+      "reqd": 1
+    },
+    {
+      "fieldname": "program_name",
+      "label": "Program Name",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "degree",
+      "label": "Degree",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "specialization",
+      "label": "Specialization",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "tuition_estimate",
+      "label": "Tuition (USD)",
+      "fieldtype": "Currency"
+    },
+    {
+      "fieldname": "deadline",
+      "label": "Deadline",
+      "fieldtype": "Date"
+    },
+    {
+      "fieldname": "risk_bucket",
+      "label": "Risk Bucket",
+      "fieldtype": "Select",
+      "options": "Safe\nTarget\nReach"
+    },
+    {
+      "fieldname": "program_url",
+      "label": "Program URL",
+      "fieldtype": "Data"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ],
+  "title_field": "program_name"
+}
