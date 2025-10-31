@@ -1,1 +1,2 @@
 # keep file to satisfy app validator
+sirjna.patches.v1_enable_dev_mode
