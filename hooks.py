@@ -1,4 +1,4 @@
-from .sirjna import __version__ as app_version
+from sirjna import __version__ as app_version
 
 app_name = "sirjna"
 app_title = "Sirjna"

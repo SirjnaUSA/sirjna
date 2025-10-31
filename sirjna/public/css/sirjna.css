@@ -1,2 +1,1 @@
-body{background:#fff;color:#000}
-.card{border:1px solid #ddd;border-radius:8px;padding:12px}
+:root{--sirjna-dot:#eee;--sirjna-text:#000}body{background:#fff;color:var(--sirjna-text)}
