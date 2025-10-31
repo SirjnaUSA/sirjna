@@ -1,7 +1,9 @@
-
 import frappe
 @frappe.whitelist()
 def create_payment_request(amount=499, currency="USD"):
+    """Create Payment Request if 'payments' app exists; else return Stripe link.
+    Also creates an Udaan Order with Pending status.
+    """
     order = frappe.new_doc("Udaan Order")
     order.amount = float(amount)
     order.currency = currency

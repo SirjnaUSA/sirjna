@@ -1,1 +1,23 @@
-<div class='container' style='padding:64px 0;'><h1>Portal</h1></div>
+{% extends "templates/web.html" %}
+{% block page_content %}
+<div class="section compact">
+  <div class="container">
+    {% if banner %}<div class="alert alert-info">{{ banner }}</div>{% endif %}
+    <h2>Udaan Portal</h2>
+    <p>Welcome{% if profile %}, {{ profile.full_name }}{% endif %}.</p>
+    <div class="progress" style="height: 12px;">
+      <div class="progress-bar" role="progressbar" style="width: {{ progress }}%"></div>
+    </div>
+    <p class="mt-2"><strong>Progress:</strong> {{ progress }}%</p>
+
+    <h4 class="mt-4">Next steps</h4>
+    <ul>
+      {% for s in steps %}
+        <li><strong>{{ s.title }}</strong> – {{ s.status }}{% if s.due_date %} (due {{ frappe.format_date(s.due_date) }}){% endif %}</li>
+      {% else %}
+        <li>No steps yet. <a href="/application-steps">Add your first step</a>.</li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endblock %}

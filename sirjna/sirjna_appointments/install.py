@@ -1,4 +1,3 @@
-
 import frappe
 from frappe.utils import add_to_date, now_datetime
 def upsert(doctype, name=None, **kwargs):

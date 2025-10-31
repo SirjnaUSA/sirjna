@@ -1,7 +1,18 @@
-
 import frappe
-WELCOME_SUBJECT = "Welcome to Udaan - your portal is ready"
-WELCOME_BODY = "Hi {{ full_name or user }},\n\nYour payment is confirmed and your Udaan portal is ready.\n\nAccess it here: {{ base_url }}/portal\n\n- Sirjna Team"
+
+WELCOME_SUBJECT = "Welcome to Udaan – your portal is ready"
+WELCOME_BODY = (
+    """
+Hi {{ full_name or user }},
+
+Your payment is confirmed and your Udaan portal is ready.
+
+Access it here: {{ base_url }}/portal
+
+— Sirjna Team
+"""
+)
+
 def _assign_role(user, role_name="Udaan Student"):
     if not frappe.db.exists("User", user):
         return
@@ -12,6 +23,7 @@ def _assign_role(user, role_name="Udaan Student"):
         ur.parenttype = "User"
         ur.parentfield = "roles"
         ur.insert(ignore_permissions=True)
+
 def handle_payment_request_update(doc, method=None):
     if (doc.get("status") or "").lower() != "paid":
         return

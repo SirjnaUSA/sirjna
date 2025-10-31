@@ -1,1 +1,31 @@
-<div class='container' style='padding:64px 0;'><h1>Universities</h1></div>
+{% extends "templates/web.html" %}
+{% block page_content %}
+<div class="section compact">
+  <div class="container">
+    <h2>Curated Universities</h2>
+    <p class="text-muted">Read‑only list curated by Sirjna mentors.</p>
+    {% for bucket, items in by_bucket.items() %}
+      <h4 class="mt-4">{{ bucket }}</h4>
+      <table class="table table-bordered">
+        <thead><tr>
+          <th>University</th><th>Program</th><th>Degree</th><th>Spec</th><th>City</th><th>Country</th><th>Tuition</th><th>Deadline</th>
+        </tr></thead>
+        <tbody>
+        {% for r in items %}
+          <tr>
+            <td><a href="{{ r.program_url or '#' }}" target="_blank">{{ r.university_name }}</a></td>
+            <td>{{ r.program_name }}</td>
+            <td>{{ r.degree }}</td>
+            <td>{{ r.specialization }}</td>
+            <td>{{ r.city }}</td>
+            <td>{{ r.country }}</td>
+            <td>{{ frappe.format_value(r.tuition_estimate, {"fieldtype":"Currency"}) }}</td>
+            <td>{% if r.deadline %}{{ frappe.format_date(r.deadline) }}{% endif %}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

@@ -1,4 +1,3 @@
-
 import frappe
 def sirjna_settings():
     try:

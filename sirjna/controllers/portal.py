@@ -1,4 +1,3 @@
-
 import frappe
 @frappe.whitelist()
 def next_step():

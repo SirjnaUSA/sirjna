@@ -1,4 +1,3 @@
-
 import frappe
 from frappe.utils import format_datetime
 @frappe.whitelist()

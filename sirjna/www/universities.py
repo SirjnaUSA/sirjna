@@ -1,4 +1,3 @@
-
 import frappe
 def get_context(context):
     records = frappe.get_all("University Program",
