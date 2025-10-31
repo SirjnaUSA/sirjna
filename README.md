@@ -1,1 +1,0 @@
-# Sirjna Full Bundle\n\nRun bench migrate; hooks will call `sirjna.install.bootstrap_everything`.\n

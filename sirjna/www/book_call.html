@@ -1,8 +1,0 @@
-<div class="container" style="padding:64px 0;">
-  <h1>Book Free Advisory Call</h1>
-  {% if sirjna_settings().get('tally_intake_url') %}
-    <iframe src="{{ sirjna_settings().get('tally_intake_url') }}" width="100%" height="900" frameborder="0"></iframe>
-  {% else %}
-    <p><a class="btn-primary" href="{{ sirjna_settings().get('calendly_url') or '#' }}">Open Calendly</a></p>
-  {% endif %}
-</div>
