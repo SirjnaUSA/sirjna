@@ -1,6 +1,0 @@
-app_name = "sirjna"
-app_title = "Sirjna"
-app_publisher = "Parinda LLC"
-app_description = "Honest, engineering-focused mentorship app (MVP)"
-app_email = "contact@sirjna.com"
-app_license = "MIT"

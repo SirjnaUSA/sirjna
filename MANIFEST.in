@@ -1,5 +1,2 @@
-include MANIFEST.in
 include README.md
-recursive-include sirjna/public *
-recursive-include sirjna/www *
-recursive-include sirjna/config *
+recursive-include sirjna *.json *.md *.txt *.py *.css *.js *.html *.xml

@@ -1,0 +1,7 @@
+{
+  "css/sirjna.bundle.css": [
+    "public/css/sirjna.css"
+  ],
+  "js/sirjna.bundle.js": [],
+  "aliases": {}
+}

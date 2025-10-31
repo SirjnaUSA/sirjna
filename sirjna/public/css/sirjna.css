@@ -1,1 +1,12 @@
-body{background:#fff;color:#000;font-family:Inter,Arial,sans-serif;}
+/* Minimal monochrome theme stub */
+:root{
+  --sirjna-fg:#000;
+  --sirjna-bg:#fff;
+  --sirjna-accent:#D4AF37;
+}
+body{background:var(--sirjna-bg);color:var(--sirjna-fg);font-family:Inter,system-ui,Arial,sans-serif;}
+.container{max-width:960px;margin:48px auto;padding:0 16px}
+.card{border:1px solid #ddd;border-radius:10px;padding:16px}
+.btn{display:inline-block;border:1px solid #000;border-radius:8px;padding:10px 14px;text-decoration:none}
+.btn:hover{background:#000;color:#fff}
+.grid-dots{background-image: radial-gradient(#eee 1px, transparent 1px);background-size:18px 18px;}
