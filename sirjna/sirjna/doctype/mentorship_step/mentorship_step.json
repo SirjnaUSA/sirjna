@@ -4,43 +4,8 @@
   "module": "Sirjna",
   "custom": 0,
   "istable": 0,
-  "editable_grid": 0,
   "track_changes": 1,
-  "fields": [
-    {
-      "fieldname": "phase",
-      "label": "Phase",
-      "fieldtype": "Link",
-      "options": "Phase",
-      "reqd": 1
-    },
-    {
-      "fieldname": "title",
-      "label": "Title",
-      "fieldtype": "Data",
-      "reqd": 1
-    },
-    {
-      "fieldname": "desc_md",
-      "label": "Description",
-      "fieldtype": "Text Editor"
-    },
-    {
-      "fieldname": "requires_upload",
-      "label": "Requires Upload",
-      "fieldtype": "Check"
-    },
-    {
-      "fieldname": "help_video_url",
-      "label": "Help Video URL",
-      "fieldtype": "Data"
-    },
-    {
-      "fieldname": "order_index",
-      "label": "Order",
-      "fieldtype": "Int"
-    }
-  ],
+  "engine": "InnoDB",
   "permissions": [
     {
       "role": "System Manager",
@@ -50,5 +15,19 @@
       "delete": 1
     }
   ],
-  "title_field": "title"
+  "fields": [
+    {
+      "fieldname": "phase",
+      "label": "Phase",
+      "fieldtype": "Select",
+      "options": "Sankalp\nUdaan\nNirman\nPragati",
+      "reqd": 1
+    },
+    {
+      "fieldname": "title",
+      "label": "Title",
+      "fieldtype": "Data",
+      "reqd": 1
+    }
+  ]
 }

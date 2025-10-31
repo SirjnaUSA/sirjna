@@ -4,8 +4,17 @@
   "module": "Sirjna",
   "custom": 0,
   "istable": 0,
-  "editable_grid": 0,
   "track_changes": 1,
+  "engine": "InnoDB",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ],
   "fields": [
     {
       "fieldname": "student",
@@ -27,26 +36,6 @@
       "fieldtype": "Select",
       "options": "Pending\nIn-Progress\nDone",
       "default": "Pending"
-    },
-    {
-      "fieldname": "uploaded_doc",
-      "label": "Uploaded Doc",
-      "fieldtype": "Attach"
-    },
-    {
-      "fieldname": "completed_on",
-      "label": "Completed On",
-      "fieldtype": "Datetime"
     }
-  ],
-  "permissions": [
-    {
-      "role": "System Manager",
-      "read": 1,
-      "write": 1,
-      "create": 1,
-      "delete": 1
-    }
-  ],
-  "title_field": "step"
+  ]
 }

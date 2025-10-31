@@ -4,12 +4,21 @@
   "module": "Sirjna",
   "custom": 0,
   "istable": 0,
-  "editable_grid": 0,
   "track_changes": 1,
+  "engine": "InnoDB",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ],
   "fields": [
     {
       "fieldname": "mode",
-      "label": "Mode (Test/Live)",
+      "label": "Mode",
       "fieldtype": "Select",
       "options": "Test\nLive",
       "default": "Test"
@@ -18,113 +27,6 @@
       "fieldname": "support_email",
       "label": "Support Email",
       "fieldtype": "Data"
-    },
-    {
-      "fieldname": "support_phone",
-      "label": "Support Phone",
-      "fieldtype": "Data"
-    },
-    {
-      "fieldname": "stripe_secret_key",
-      "label": "Stripe Secret Key (Test)",
-      "fieldtype": "Password"
-    },
-    {
-      "fieldname": "stripe_webhook_secret",
-      "label": "Stripe Webhook Secret (Test)",
-      "fieldtype": "Password"
-    },
-    {
-      "fieldname": "stripe_secret_key_live",
-      "label": "Stripe Secret Key (Live)",
-      "fieldtype": "Password"
-    },
-    {
-      "fieldname": "stripe_webhook_secret_live",
-      "label": "Stripe Webhook Secret (Live)",
-      "fieldtype": "Password"
-    },
-    {
-      "fieldname": "zoom_account_id",
-      "label": "Zoom Account ID",
-      "fieldtype": "Data"
-    },
-    {
-      "fieldname": "zoom_client_id",
-      "label": "Zoom Client ID",
-      "fieldtype": "Data"
-    },
-    {
-      "fieldname": "zoom_client_secret",
-      "label": "Zoom Client Secret",
-      "fieldtype": "Password"
-    },
-    {
-      "fieldname": "brand_primary",
-      "label": "Brand Primary",
-      "fieldtype": "Data",
-      "default": "#000000"
-    },
-    {
-      "fieldname": "brand_accent",
-      "label": "Brand Accent",
-      "fieldtype": "Data",
-      "default": "#D4AF37"
-    },
-    {
-      "fieldname": "brand_bg",
-      "label": "Brand BG",
-      "fieldtype": "Data",
-      "default": "#FFFFFF"
-    },
-    {
-      "fieldname": "portal_banner_text",
-      "label": "Portal Banner Text",
-      "fieldtype": "Small Text"
-    },
-    {
-      "fieldname": "enable_drive",
-      "label": "Enable Drive",
-      "fieldtype": "Check"
-    },
-    {
-      "fieldname": "enable_insights",
-      "label": "Enable Insights",
-      "fieldtype": "Check"
-    },
-    {
-      "fieldname": "enable_wiki",
-      "label": "Enable Wiki",
-      "fieldtype": "Check"
-    },
-    {
-      "fieldname": "enable_crm",
-      "label": "Enable CRM",
-      "fieldtype": "Check"
-    },
-    {
-      "fieldname": "enable_builder",
-      "label": "Enable Builder",
-      "fieldtype": "Check"
-    },
-    {
-      "fieldname": "enable_gameplan",
-      "label": "Enable Gameplan",
-      "fieldtype": "Check"
-    },
-    {
-      "fieldname": "enable_books",
-      "label": "Enable Books",
-      "fieldtype": "Check"
-    }
-  ],
-  "permissions": [
-    {
-      "role": "System Manager",
-      "read": 1,
-      "write": 1,
-      "create": 1,
-      "delete": 1
     }
   ],
   "is_single": 1

@@ -1,2 +1,1 @@
-recursive-include sirjna *.json *.py *.html *.css *.js *.md
-include README.md
+recursive-include sirjna *.json *.css *.html *.js
