@@ -1,7 +1,5 @@
 include MANIFEST.in
 include README.md
-include build.json
 recursive-include sirjna/public *
-recursive-include sirjna/templates *
-recursive-include sirjna/config *
 recursive-include sirjna/www *
+recursive-include sirjna/config *

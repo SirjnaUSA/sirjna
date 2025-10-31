@@ -1,1 +1,1 @@
-window.__sirjna='ok';
+console.log('Sirjna assets loaded');

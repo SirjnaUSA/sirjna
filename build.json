@@ -1,8 +1,0 @@
-{
-  "js/sirjna.bundle.js": [
-    "public/js/sirjna.js"
-  ],
-  "css/sirjna.bundle.css": [
-    "public/css/sirjna.css"
-  ]
-}
