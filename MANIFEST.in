@@ -1,2 +1,4 @@
-graft sirjna
+graft sirjna/public
+graft sirjna/templates
+graft sirjna/www
 global-exclude *.pyc
