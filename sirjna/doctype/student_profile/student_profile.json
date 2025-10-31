@@ -1,0 +1,142 @@
+{
+  "doctype": "DocType",
+  "name": "Student Profile",
+  "module": "Sirjna",
+  "custom": 0,
+  "istable": 0,
+  "track_changes": 1,
+  "editable_grid": 1,
+  "quick_entry": 1,
+  "engine": "InnoDB",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1,
+      "cancel": 1,
+      "amend": 1
+    },
+    {
+      "role": "Ops",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "Mentor",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "Student",
+      "read": 1,
+      "write": 1
+    }
+  ],
+  "fields": [
+    {
+      "fieldname": "user",
+      "fieldtype": "Link",
+      "label": "User",
+      "options": "User",
+      "reqd": 1
+    },
+    {
+      "fieldname": "full_name",
+      "fieldtype": "Data",
+      "label": "Full Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "email",
+      "fieldtype": "Data",
+      "label": "Email"
+    },
+    {
+      "fieldname": "phone",
+      "fieldtype": "Data",
+      "label": "Phone"
+    },
+    {
+      "fieldname": "address",
+      "fieldtype": "Small Text",
+      "label": "Address"
+    },
+    {
+      "fieldname": "undergrad_college",
+      "fieldtype": "Data",
+      "label": "Undergrad College"
+    },
+    {
+      "fieldname": "branch_major",
+      "fieldtype": "Data",
+      "label": "Branch / Major"
+    },
+    {
+      "fieldname": "cgpa",
+      "fieldtype": "Float",
+      "label": "CGPA"
+    },
+    {
+      "fieldname": "backlogs",
+      "fieldtype": "Int",
+      "label": "Backlogs"
+    },
+    {
+      "fieldname": "tests_json",
+      "fieldtype": "Small Text",
+      "label": "Tests (JSON)"
+    },
+    {
+      "fieldname": "country_target",
+      "fieldtype": "Select",
+      "label": "Target Country",
+      "options": "US\nCanada",
+      "default": "US"
+    },
+    {
+      "fieldname": "intake_term",
+      "fieldtype": "Select",
+      "label": "Intake Term",
+      "options": "Fall\nSpring"
+    },
+    {
+      "fieldname": "intake_year",
+      "fieldtype": "Int",
+      "label": "Intake Year"
+    },
+    {
+      "fieldname": "short_university_ideas",
+      "fieldtype": "Small Text",
+      "label": "Universities (ideas)"
+    },
+    {
+      "fieldname": "goals_notes",
+      "fieldtype": "Small Text",
+      "label": "Goals / Notes"
+    },
+    {
+      "fieldname": "status_phase",
+      "fieldtype": "Select",
+      "label": "Current Phase",
+      "options": "Sankalp\nUdaan\nNirmaan\nPragati",
+      "default": "Sankalp"
+    },
+    {
+      "fieldname": "progress_pct",
+      "fieldtype": "Percent",
+      "label": "Progress %",
+      "read_only": 1
+    },
+    {
+      "fieldname": "assigned_mentor",
+      "fieldtype": "Link",
+      "label": "Assigned Mentor",
+      "options": "User"
+    }
+  ]
+}

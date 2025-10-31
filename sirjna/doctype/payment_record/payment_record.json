@@ -1,0 +1,92 @@
+{
+  "doctype": "DocType",
+  "name": "Payment Record",
+  "module": "Sirjna",
+  "custom": 0,
+  "istable": 0,
+  "track_changes": 1,
+  "editable_grid": 1,
+  "quick_entry": 1,
+  "engine": "InnoDB",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1,
+      "cancel": 1,
+      "amend": 1
+    },
+    {
+      "role": "Ops",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "Mentor",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "Student",
+      "read": 1,
+      "write": 1
+    }
+  ],
+  "fields": [
+    {
+      "fieldname": "payer_email",
+      "fieldtype": "Data",
+      "label": "Payer Email"
+    },
+    {
+      "fieldname": "payer_name",
+      "fieldtype": "Data",
+      "label": "Payer Name"
+    },
+    {
+      "fieldname": "purpose",
+      "fieldtype": "Select",
+      "label": "Purpose",
+      "options": "Advisory_25\nMentorship_349\nMentorship_499"
+    },
+    {
+      "fieldname": "amount_usd",
+      "fieldtype": "Currency",
+      "label": "Amount (USD)"
+    },
+    {
+      "fieldname": "stripe_payment_link",
+      "fieldtype": "Data",
+      "label": "Stripe Payment Link URL"
+    },
+    {
+      "fieldname": "paid_at",
+      "fieldtype": "Datetime",
+      "label": "Paid At"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Created\nPaid\nRefunded\nFailed",
+      "default": "Created"
+    },
+    {
+      "fieldname": "ref_doctype",
+      "fieldtype": "Link",
+      "label": "Related Doctype",
+      "options": "DocType"
+    },
+    {
+      "fieldname": "ref_name",
+      "fieldtype": "Dynamic Link",
+      "label": "Related Name",
+      "options": "ref_doctype"
+    }
+  ]
+}

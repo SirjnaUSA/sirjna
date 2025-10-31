@@ -1,0 +1,53 @@
+{
+  "doctype": "DocType",
+  "name": "Phase",
+  "module": "Sirjna",
+  "custom": 0,
+  "istable": 0,
+  "track_changes": 1,
+  "editable_grid": 1,
+  "quick_entry": 1,
+  "engine": "InnoDB",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1,
+      "cancel": 1,
+      "amend": 1
+    },
+    {
+      "role": "Ops",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "Mentor",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "Student",
+      "read": 1,
+      "write": 1
+    }
+  ],
+  "fields": [
+    {
+      "fieldname": "title",
+      "fieldtype": "Data",
+      "label": "Title",
+      "reqd": 1
+    },
+    {
+      "fieldname": "description",
+      "fieldtype": "Small Text",
+      "label": "Description"
+    }
+  ]
+}

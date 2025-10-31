@@ -1,9 +1,15 @@
-:root{
-  --ink:#000; --paper:#fff; --dot:#eee; --accent:#D4AF37;
-}
-body{background:var(--paper); color:var(--ink);}
-.gridpaper{
-  background: radial-gradient(var(--dot) 1px, transparent 1px);
-  background-size: 16px 16px;
-}
-.card{border:1px solid #ddd; border-radius:8px; padding:16px; background:#fff;}
+/* Sirjna Phase B minimal UI helpers */
+:root{--sj-black:#000;--sj-gold:#D4AF37;--sj-muted:#555}
+body{background:#fff;color:#000;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+.hero{max-width:980px;margin:48px auto;padding:0 16px}
+.grid{display:grid;gap:16px}
+.grid-2{grid-template-columns:1fr 1fr}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+.card{border:1px solid #ddd;border-radius:12px;padding:16px}
+.btn{display:inline-block;border:1px solid #000;border-radius:10px;padding:10px 16px;text-decoration:none}
+.btn:hover{background:#000;color:#fff}
+.muted{color:var(--sj-muted)}
+.kicker{letter-spacing:.08em;text-transform:uppercase;font-size:.8rem;color:#333}
+.badge{display:inline-block;border:1px solid #000;border-radius:999px;padding:4px 10px;font-size:.8rem}
+.note{background:#f7f7f7;border:1px dashed #ccc;border-radius:8px;padding:10px}
+@media (max-width:900px){.grid-2,.grid-3{grid-template-columns:1fr}}

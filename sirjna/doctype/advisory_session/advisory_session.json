@@ -1,0 +1,81 @@
+{
+  "doctype": "DocType",
+  "name": "Advisory Session",
+  "module": "Sirjna",
+  "custom": 0,
+  "istable": 0,
+  "track_changes": 1,
+  "editable_grid": 1,
+  "quick_entry": 1,
+  "engine": "InnoDB",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1,
+      "cancel": 1,
+      "amend": 1
+    },
+    {
+      "role": "Ops",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "Mentor",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "Student",
+      "read": 1,
+      "write": 1
+    }
+  ],
+  "fields": [
+    {
+      "fieldname": "full_name",
+      "fieldtype": "Data",
+      "label": "Full Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "email",
+      "fieldtype": "Data",
+      "label": "Email",
+      "reqd": 1
+    },
+    {
+      "fieldname": "phone",
+      "fieldtype": "Data",
+      "label": "Phone"
+    },
+    {
+      "fieldname": "preferred_slot",
+      "fieldtype": "Datetime",
+      "label": "Preferred Slot"
+    },
+    {
+      "fieldname": "is_paid",
+      "fieldtype": "Check",
+      "label": "Payment Received ($25)"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Booked\nCompleted\nCancelled",
+      "default": "Booked"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Small Text",
+      "label": "Notes"
+    }
+  ]
+}

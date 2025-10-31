@@ -1,0 +1,79 @@
+{
+  "doctype": "DocType",
+  "name": "Webinar",
+  "module": "Sirjna",
+  "custom": 0,
+  "istable": 0,
+  "track_changes": 1,
+  "editable_grid": 1,
+  "quick_entry": 1,
+  "engine": "InnoDB",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1,
+      "cancel": 1,
+      "amend": 1
+    },
+    {
+      "role": "Ops",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "Mentor",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "Student",
+      "read": 1,
+      "write": 1
+    }
+  ],
+  "fields": [
+    {
+      "fieldname": "title",
+      "fieldtype": "Data",
+      "label": "Title",
+      "reqd": 1
+    },
+    {
+      "fieldname": "start_at",
+      "fieldtype": "Datetime",
+      "label": "Start At",
+      "reqd": 1
+    },
+    {
+      "fieldname": "duration_min",
+      "fieldtype": "Int",
+      "label": "Duration (min)",
+      "default": 45
+    },
+    {
+      "fieldname": "platform",
+      "fieldtype": "Select",
+      "label": "Platform",
+      "options": "Zoom\nYouTube Live\nInstagram Live"
+    },
+    {
+      "fieldname": "external_link",
+      "fieldtype": "Data",
+      "label": "Join/Watch Link"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Scheduled\nCompleted",
+      "default": "Scheduled"
+    }
+  ],
+  "has_web_view": 1
+}
