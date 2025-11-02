@@ -1,0 +1,106 @@
+SIRJNA — USER THOUGHTS COMPENDIUM (v2025-11-07)
+
+Purpose of this file:
+A structured dump of my own dictated ideas/preferences for Sirjna (design, product, pricing, mentorship model, portal, operations, and long-term vision). Written as first-principles requirements to keep safe and reference anytime.
+
+1) BRAND, VOICE, ETHOS
+- Honest, engineering-first mentorship for Indian B.E./B.Tech./M.Tech. students targeting MS/MEng in USA/Canada.
+- No agents. No commissions. No visa/legal filing. No guarantees. Educational mentorship only.
+- Voice: human, warm, direct, factual, minimal, engineerly. No hype/marketing jargon. Legal pages can be formal; everything else should feel personal and honest.
+- Emotion target: make students and parents feel clarity, trust, and motivation.
+
+2) AESTHETIC & UX
+- Vibe like Tally.so: black/white base, airy layout, very simple and fast, “fun but not childish.”
+- Accent color: one highlight (gold or a vivid color), used sparingly for hand-drawn/scribble highlights or micro-accents.
+- Avoid clutter and heavy graphics. Use subtle dotted background; Apple-level minimal.
+- Accessibility: strong contrast, visible focus states, large touch targets, mobile-first.
+- Micro-interactions: tasteful hover, scribble underline/circle, small celebratory moments (e.g., Founder Cohort hover confetti).
+
+3) STORY & CONTENT FEEL
+- Conversation-driven storytelling: student, parent, mentor perspectives. Short sections with hooks; enjoyable to explore.
+- Motivational but grounded: celebrate progress, no fake urgency. Mix quotes/anecdotes/snippets.
+- Gen-Z-aware attention cues without clickbait.
+- Copy style: small paragraphs, simple words, rhythm (serious → hopeful → factual → punchy).
+
+4) PROGRAM PHASES (single taxonomy across site + portal)
+- Sankalp — school/early-college to “ready to apply”: decision clarity, test planning, profile-building.
+- Udaan — apply to 30 days after arrival: shortlist 5/5/5 (Safe/Target/Reach), SOP/LOR/CV feedback, funding guidance, visa awareness (no filing), orientation.
+- Nirmaan — grad school to first job: on-campus adaptation, research/project mentoring, resume/network/interview prep.
+- Pragati — career growth: licensing awareness, leadership, long-term strategies, P.Eng/PE/EIT guidance.
+- Students can join any single phase or the whole path.
+
+5) PORTAL MODEL (DELIVERY PHILOSOPHY)
+- Not call-based. No “phone anytime.”
+- Mechanism: in-portal help. Student posts screenshot + short note; team replies within 24h.
+- Every answer is documented, reusable, and becomes part of a shared knowledge pool. No repeated calls, no lost instructions.
+- Steps are gated: cannot go to Step N+1 before Step N is complete. Clear “you are on step X of Y.”
+- Parent access is read-only; they see phase, % complete, next actions. Mentors see queues and today’s tasks.
+
+6) PRICING & RATIONALE
+- Flat fee: Standard $499 (tax-included). Founder Cohort: $349 for first 101 students; one random founder gets a full refund.
+- $25 1-on-1 advisory: non-refundable, credited upon joining.
+- Why $499? High-value mentorship; worth <<1% of first-year salary; we cut costs by avoiding ads/agents. We charge for rigor/time, not hype.
+- Transparency always visible on site; no hidden fees.
+
+7) REFERRAL PROGRAM
+- 10% reward per successful enrollment via personal referral link.
+- Balance visible within ~1 day; withdrawable after 14 days (refund/chargeback window) as gift card/account credit/cash where compliant.
+- Anti-abuse: no MLM, self-referral blocked, basic KYC for cash, yearly cap (e.g., $600).
+
+8) MENTORS & POSITIONING
+- Real working engineers. Typical earnings $90–$150/hr; firms bill $300–$500/hr for similar time.
+- Sirjna keeps price low by cutting middlemen and marketing spend; mentors should be fairly compensated.
+- Emphasize “engineers mentoring engineers,” practical and precise.
+
+9) PUBLIC WEBSITE STRUCTURE (Tally-style)
+- Navbar: Home, How It Works, Pricing, FAQ, Login. Footer: About, Webinars, Advisory, Apply, Privacy, Terms, Contact.
+- Home: hero one-liner; 4-phase strip; clear CTAs: Enroll/Founder $349, Join Webinar, Book 1-on-1.
+- How It Works: portal-first model, no constant calls, 24h response, documented fixes; 4-phase cards.
+- Pricing: $499 flat; Founder $349 (101 seats + refund chance), rationale “why $499,” $25 credit rule, refund policy.
+- FAQ: top 10 honest Q&A (scope, refunds, timelines, referrals, calls vs portal, etc.).
+- Webinars: list upcoming; register via simple form; Zoom links where applicable.
+- Advisory: $25 call; booking form; credit policy; Stripe payment.
+- Apply: straight enrollment CTA; highlight scope/limits.
+- About/Privacy/Terms/Contact: concise, trustworthy, and compliant.
+- Overall pages must be fun to read, with hand-drawn highlight elements and micro-interactions.
+
+10) BACKEND PLATFORM & DATA
+- Frappe v15 app only; repo-first (GitHub PRs), hosted on Frappe Cloud.
+- Core integrations only: Stripe (payments), Zoom (webinars/1-on-1), Google (email/calendar optional). No other dependencies.
+- DocTypes (exact names): Phase, Student Profile, Mentorship Step, Student Progress, Webinar, Webinar Registration, Advisory Session, Payment Record, University, University Program/Program Deadline, Shortlist + Shortlist Entry (5/5/5), Student Document + Document Review, Resource Collection/Resource Link (per phase), Referral Link, Referral Credit, Payout Request, Sirjna Settings (Single).
+- Hooks: Payment Record.on_update (webhook processing); Student Progress.after_insert (recompute progress % + auto-advance).
+- Schedulers: daily webinar reminders; hourly auto-unlock; daily referral state update.
+- Guards: hide payments/Zoom features when keys absent; admin hints only. Idempotent webhooks.
+- Shortlist logic: initial 5/5/5 generator with mentor review before student sees.
+- Notifications: Welcome, Webinar reminders (T–24h), Advisory confirmation, Phase advance, Document review results.
+
+11) OPERATIONS
+- Daily: Payment exceptions, portal issues (respond <24h), Zoom links. Weekly: funnel metrics, backups, permission audits. Monthly: rotate secrets, content refresh, end-to-end test.
+- Refund policy: allowed before first mentorship session begins; $25 advisory is non-refundable but credited if joining.
+- Support tone: concise, kind, factual. No scripts.
+
+12) LONG-TERM COMMUNITY & INCUBATION
+- Alumni become part of a closed network with mentorship channels and sessions.
+- Future: Sirjna Labs — incubator for alumni ideas (reviews, resources, small seed support). First contact list is alumni.
+- We are “recruiting saplings”: students guided from school to MS to career; some become collaborators/founders later.
+- Users can pick any phase only (e.g., Sankalp-only); okay to use others for applications; we remain mentorship-only.
+
+13) SOCIAL & CONTENT DIRECTION
+- Website should feel exciting and unique; storytelling flow with dialogue cards (Student × Parent × Sirjna).
+- Social media later: modern hooks, myth-busting, real stories; keep website copy as the reference.
+- SEO: honest page descriptions; simple titles; semantic H1/H2.
+
+14) NON-NEGOTIABLES
+- No ghostwriting, no promises of admission/visa/job, no commissions.
+- Keep everything short, direct, transparent, and accessible.
+- Prefer documentation over calls; create reusable guides from every solved issue.
+- Pricing always shown with taxes included.
+
+15) TECHNICAL QUICKLIST
+- Repo layout includes /www public pages, /public/css/sirjna.css, api/, doctype/, templates/.
+- Use custom Stripe Checkout for $25/$349/$499; verify via webhook; auto-credit $25 on joining.
+- Referral payout can start manual; automate later. Use toggles in Sirjna Settings for optional apps.
+- CI basics (lint, safe patches). No server console edits; all via GitHub PRs.
+
+16) CLOSING INTENT
+- Sirjna = Honest Mentorship for Engineers. Built in India, guided in the USA. Designed to last; designed to create.
