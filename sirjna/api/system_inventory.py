@@ -37,7 +37,7 @@ def _sirjna_expected():
 def generate_system_inventory():
     """Build a ZIP of CSVs + a JSON summary and return a File URL."""
     # 1) Collect data
-    doctypes = _get_all("DocType", ["name","module","custom","is_table","autoname","document_type","issingle"])
+    doctypes = _get_all("DocType", ["name","module","custom","istable","autoname","document_type","issingle"])
     singles  = [d for d in doctypes if d.get("issingle")]
     web_pages = _get_all("Web Page", ["name","route","published","template_path"])
     web_forms = _get_all("Web Form", ["name","route","is_published","login_required"])
